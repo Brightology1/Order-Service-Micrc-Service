@@ -5,6 +5,7 @@ import com.brightology.orderservice.dto.OrderRequest;
 import com.brightology.orderservice.model.Order;
 import com.brightology.orderservice.model.OrderLineItems;
 import com.brightology.orderservice.repository.OrderRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class OrderService {
 
     private final OrderRepository orderRepository;
